@@ -7,8 +7,8 @@ const readline = require('readline');
 
 // Realine 모듈의 Interface 객체
 const rl = readline.createInterface({
-   input: process.stdin,
-   output: process.stdout
+   input: process.stdin, //입력(터미널)
+   output: process.stdout //출력(콘솔,터미널)
 });
 
 rl.once('line', input => {
@@ -19,6 +19,15 @@ rl.addListener('line', input => {
    console.log('addListener(line) Event:', input);
 });
 
-rl.on('line', input => {
+rl.on('line', input => { //엔터 이벤트
    console.log('on(line) Event:', input);
 });
+
+
+/* 에러
+class MyClass{
+}
+const obj = new MyClass();
+obj.on('line', (input) => {
+   console.log('My Class 이벤트', input);
+});*/
