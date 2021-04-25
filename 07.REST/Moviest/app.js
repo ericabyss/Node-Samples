@@ -9,5 +9,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const movieRouter = require('./router/MovieRouter');
 app.use(movieRouter);
 
-module.exports = app;
+//module.exports = app; 원래
+app.listen(3000);
 
